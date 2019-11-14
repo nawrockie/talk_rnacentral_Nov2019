@@ -21,41 +21,90 @@
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Slide 0 - title
 \begin{slide}
 \begin{center}
-\large{\textbf{Reference-based viral sequence annotation using VADR}}
 
-\normalsize
+\textbf{RNAcentral uses Rfam to annotate sequences}
 
-Eric Nawrocki \\
+\begin{itemize}
+\item 16.5 million sequences
+\item 50\% are from Rfam
+\item 40\% have Rfam hits
+\item  2\% are potential sources of new Rfam families
+\end{itemize}
 
-\medskip
-
-\medskip
-
-\medskip
-
-\medskip
-
-\medskip
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Rfam: RNA families database (3016 families)}
 
 \small
-\begin{tabular}{c}
-%Alejandro Sch\"{a}ffer's group \\
-%\\
-National Center for Biotechnology Information\\
-National Institutes of Health\\
-\\
-\end{tabular}
+\begin{itemize}
+\item Each family is represented by:
+  \begin{itemize}
+  \item representative SEED alignment annotated with secondary-structure
+  \item covariance model (CM) built from the SEED
+  \item hits in Rfamseq database above GA threshold (FULL)
+  \end{itemize}
+\end{itemize}
 
-\vspace{0.1in}
+\vspace{0.5in}
+\includegraphics[height=5in]{figs/kalvari18-rfam-schema}
 
-\includegraphics[width=2.5in]{figs/ncbi-logo}
+\vfill
 
 \end{center}
 \end{slide}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+  \textbf{Rfamseq: switch from subset of ENA to genome-centric database}
+  \begin{itemize}  
+  \item about 8000 reference genomes
+  \item reduces redundancy
+  \item more scalable
+  \end{itemize}
+\end{center}    
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+  \textbf{Rfamseq: switch from subset of ENA to genome-centric database}
+  \begin{itemize}  
+  \item about 8000 reference genomes
+  \item reduces redundancy
+  \item more scalable
+  \end{itemize}
+
+  \textbf{Rfamseq: genome-centric database means less flexible SEEDs}
+  \begin{itemize}  
+  \item previous requirement: SEED sequences must be in Rfamseq
+  \item new approach allows any GenBank or RNAcentral sequence
+  \item verification of sequences utilizes GenBank and RNAcentral API
+  \end{itemize}
+\end{center}    
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+  \textbf{Future directions for Rfam}
+  \begin{itemize}  
+  \item improve Rfam families based on crystal structures
+  \item synchronize with mirBase
+  \item use model reference coordinates to annotate important features 
+  \end{itemize}
+\end{center}    
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{slide}
 
@@ -112,185 +161,3 @@ Nawrocki; DK: Diana Kolbe; \\ SB: Sarah Burge; AP: Anton Petrov
 
 \vfill
 \end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-
-\textbf{Traditional strategy SEED from database} 
-
-
-\vfill
-
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-
-\textbf{Genome-based database presents a problem}
-
-
-\vfill
-
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-
-\textbf{Independent seed strategy now ready}
-
-
-\vfill
-
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Rfam on the cloud}
-
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-
-\large
-\begin{center}
-\large{\textbf{Acknowledgements}} \\
-
-\normalsize
-\vspace{0.5in}
-
-Anton Petrov \\
-Ioanna Kalvari \\
-
-\vspace{0.5in}
-
-Alex Bateman \\
-Rob Finn \\
-Sean Eddy \\
-David Landsman \\
-Jim Ostell
-
-\end{center}
-
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{ajb and aja error codes indicates lack of an expected adjacent feature}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/errornew-4-ajb}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Unexpected stop codon errors (trc,ntr)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/error-1-trc-ntr}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Unexpected stop codon errors (ext,nst)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/error-2-ext-nst}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Missing expected features (str,stp,nm3)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/error-3-str-stp-nm3}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Problem with homology search prediction (bd5,bd3,nop)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/error-4-bd5-bd3-nop}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Unexpected relationship to other features (olp)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/errornew-3-olp}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Unexpected relationship to other features (ajb)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/errornew-4-ajb}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Unexpected relationship to other features (aja)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/error-7-aja}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Problem annotating CDS due to mature peptide errors (aji,int,inp)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/error-8-aji-int-inp}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Lack of exactly one origin sequence (ori)}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/error-9-ori}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{The Virus Variation Resource is a powerful tool for viral research}
-
-\includegraphics[width=8.5in]{figs/viv-dengue-query}
-
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
