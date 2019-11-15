@@ -77,18 +77,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{slide}
 \begin{center}
-  \textbf{Rfamseq: switch from subset of ENA to genome-centric database}
-  \begin{itemize}  
-  \item about 8000 reference genomes
-  \item reduces redundancy
-  \item more scalable
-  \end{itemize}
-
+%  \textbf{Rfamseq: switch from subset of ENA to genome-centric database}
+%  \begin{itemize}  
+%  \item about 8000 reference genomes
+%  \item reduces redundancy
+%  \item more scalable
+%  \end{itemize}
   \textbf{Rfamseq: genome-centric database means less flexible SEEDs}
   \begin{itemize}  
   \item previous requirement: SEED sequences must be in Rfamseq
-  \item new approach allows any GenBank or RNAcentral sequence
+  \item new: any GenBank or RNAcentral sequence can be in the SEED
   \item verification of sequences utilizes GenBank and RNAcentral API
+  \end{itemize}
+\vspace{0.5in}
+\includegraphics[height=4in]{figs/kalvari18-rfam-schema}
+\end{center}    
+\vfill
+\tiny \flushleft{Kalvari et al., 2018}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+  \textbf{Rfam in the cloud}
+  \small
+  \begin{itemize}  
+  \item Ioanna has made the Rfam family building pipeline available to anyone
+  \item Students in Daniel Gautheret's class are building Staphylococcus RNA families
+  \item We are seeking RNA experts to improve or add to Rfam
+    \begin {itemize}
+      \item new, relaxed SEED requirements make it easier to use existing curated alignments 
+    \end{itemize}
   \end{itemize}
 \end{center}    
 \vfill
@@ -96,19 +114,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{slide}
 \begin{center}
+  \textbf{Rfam in the cloud}
+  \small
+  \begin{itemize}  
+  \item Ioanna has made the Rfam family building pipeline available to anyone
+  \item Students in Daniel Gautheret's class are building Staphylococcus RNA families
+  \item We are seeking RNA experts to improve or add to Rfam
+    \begin {itemize}
+      \item new, relaxed SEED requirements make it easier to use existing curated alignments 
+    \end{itemize}
+  \end{itemize}
+
+  \normalsize
   \textbf{Future directions for Rfam}
+  \small
   \begin{itemize}  
   \item improve Rfam families based on crystal structures
   \item synchronize with mirBase
+  \item viral families from Manja Marz
   \item use model reference coordinates to annotate important features 
-  \item continue to add families
   \end{itemize}
 \end{center}    
 \vfill
 \end{slide}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{slide}
@@ -181,3 +210,32 @@ Nawrocki; DK: Diana Kolbe; \\ SB: Sarah Burge; AP: Anton Petrov
 \end{center}
 \vfill
 \end{slide}
+
+\begin{slide}
+
+\large
+\begin{center}
+\large{\textbf{Acknowledgements}} \\
+
+\normalsize
+\vspace{0.75in}
+
+\small
+\begin{tabular}{l|l|l}
+%                  & \\ \hline
+%                  & \\
+Ioanna Kalvari        & Sarah Burge      \\
+Anton Petrov          & Paul Gardner     \\
+Rob Finn              & Sam Griffiths-Jones \\
+Alex Bateman          & Jen Daub            \\
+Sean Eddy             & Diana Kolbe 
+\end{tabular}
+
+\includegraphics[width=2.5in]{figs/NIH_NLM_ABRV_2C_4-white}
+\includegraphics[width=2.5in]{figs/ncbi-logo}
+
+\end{center}
+
+\vfill
+\end{slide}
+
